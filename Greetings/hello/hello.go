@@ -16,7 +16,7 @@ func main()  {
 	log.SetFlags(0)
 
 	//Solicitar un mensaje de bienvenida.
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("Gladys")
 	
 	//Si se devuelve un error, imprimirlo en la consola y salir del programa.
 	if err != nil {
