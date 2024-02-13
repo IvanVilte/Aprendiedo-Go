@@ -15,14 +15,17 @@ func main()  {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	//Solicitar un mensaje de bienvenida.
-	message, err := greetings.Hello("Gladys")
+	//Un slice de nombres.
+	names := []string{"Gladys", "Samantha", "Darrin"}
+	
+	//Solicitar un mensaje de bienvenida para los nombres.
+	messages, err := greetings.Hellos(names)
 	
 	//Si se devuelve un error, imprimirlo en la consola y salir del programa.
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	//Si no se devuelve ningún error, imprima el mensaje devuelto en la consola.
-	fmt.Println(message)
+	//Si no se devuelve ningún error, imprime el map de mensajes devuelto en la consola.
+	fmt.Println(messages)
 }
